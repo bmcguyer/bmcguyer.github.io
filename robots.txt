@@ -1,0 +1,3 @@
+User-Agent:*
+Disallow:/graphics/
+Disallow:/cv/

@@ -1,0 +1,23 @@
+/*
+* Bart McGuyer 2017
+*/
+
+a {color:#4682B4; text-decoration:none;}
+a:hover {text-decoration:underline;}
+hr {margin:0px;padding:5px;}
+img {border:0px solid black;padding:0px;}
+p {text-align:justify;}
+.reverse {unicode-bidi: bidi-override;direction: rtl;}
+.hangingindent {padding-left: 22px; text-indent: -22px; padding-left:0px; margin-left:22px;}
+#topnav{
+	text-align: center;
+	letter-spacing:0.1em;
+	font-weight:bold;
+	background-color:#CCCCCC;
+}
+#thispage{
+	border-bottom: 2px solid #000000;
+}
+#otherpage{
+	color:#FFFFFF;
+}

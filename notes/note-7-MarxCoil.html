@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>bartmcguyer | tech note | Marx Coil</title>
+  <meta name="description" content="A personal and professional website about Bart McGuyer, a 
+  	communication systems engineer at Facebook and experimental atomic, molecular, and optical 
+  	physicist.">
+  <meta name="author" content="Bart McGuyer, Bart H. McGuyer, B. H. McGuyer, B. McGuyer.">
+  <meta name="robots" content="noimageindex" />
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/skeleton.css">
+  <link rel="stylesheet" href="../css/custom.css">
+  
+  <style type="text/css">
+  		li{
+  			margin: 0px 0;
+		}
+  </style>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– 
+  <link rel="icon" type="image/png" href="images/favicon.png">-->
+
+  <!-- Google Analytics --> 
+  <script>
+  	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  	ga('create', 'UA-84379004-1', 'auto');
+  	ga('send', 'pageview');
+  </script>
+  
+  <!-- Mathjax -->
+  <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+  	
+  	<div class="row" style="margin-top: 5%;">
+  		<div class="twelve columns">
+  			<h5>Bart H. McGuyer</h5>
+  		</div>
+  	</div>
+	
+	<!-- Navigation -->
+	<div class="row" style="margin-top: 0%" id="topnav">
+		<div class="three columns">
+			<a href="../index.html" id="otherpage">About</a>
+		</div>
+		<div class="three columns">
+			<a href="../publications.html" id="otherpage">Publications</a>
+		</div>
+		<div class="three columns" id="thispage">
+			Tech Notes
+		</div>
+		<div class="three columns">
+			<a href="https://flic.kr/s/aHsm6XLU2i" id="otherpage">Photos</a>
+		</div>
+	</div>
+	
+	<!-- Back to other tech notes -->
+	<div class="row" style="margin-top: 2%">
+		<div class="twelve columns">
+			<p>
+			[ <a href="../notes.html">Back to other Tech Notes</a> ]
+			</p>
+		</div>
+	</div>
+  	
+  	<!-- Content -->
+    <div class="row" style="margin-top: 0%">
+      	<div class="twelve columns">
+			<strong><u><h5>
+			Can a Marx generator produce sparks like a Tesla coil?
+			</h5></u></strong>
+			<h6>
+			TLDR: 
+			<em>
+			Yes! If a Marx generator outputs a waveform resembling that of a Tesla coil it can produce similar free, dancing sparks <a href="#1"?>[1]</a>. 
+			</em></h6>
+			
+			<p style="text-indent: 50px;">
+			Tesla coils remain popular for classroom demonstrations and DIY/Maker projects. 
+			I suspect the main reason for this is that they readily produce sparks that are much more fascinating to watch than sparks from similar high voltage devices. 
+			Instead of mild purple wisps or brief loud flashes between electrodes, they can produce large, visually persistent and evolving spark structures that freely branch off a single terminal in air.   
+			</p>
+			
+			<p> 
+			It’s interesting to wonder if other devices could be modified to produce sparks similar to Tesla coils. 
+			Specifically, if they could produce sparks that appear to dance off a single terminal. 
+			Tesla coils typically achieve this illusion by repeatedly outputting burst of radio frequency (RF) high voltage, each of which can reestablish and elongate the spark pathways from previous bursts. 
+			What would happen if a different device was made to work similarly?  
+			</p>
+			
+			<p>
+			I became curious about this because I was interested in a problem called “streamer loading:” 
+			Tesla coil enthusiasts suspect that one of the limits to producing long sparks comes from how sparks change the coupling between resonant circuits in a Tesla coil 
+			<a href="#1">[1]</a>. 
+			Wondering how to get around this, a direct approach seemed to be eliminating the need for resonant coupling. 
+			That is, throwing away one of the resonant circuits. 
+			In that case, what’s left is no longer a Tesla coil 
+			<a href="#2">[2]</a>, so where to begin? 
+			</p>
+			<p>
+			I decided to try and modify a Marx generator to produce output like a Tesla coil 
+			<a href="#1">[1]</a>. 
+			Marx generators are also popular DIY/Maker projects, but they normally produce a single, intense quasi-DC spark between two terminals. 
+			I built a small one that instead produced bursts of RF repeatedly like a Tesla coil. 
+			Importantly, I fit it inside a solenoid resembling a Tesla coil’s secondary, which minimized a lot of unwanted circuit and corona losses. 
+			The first time I tried the generator inside a solenoid, it produces sparks just like those from a Tesla coil! 
+			<a href="../media/2018_RSI_McGuyer_MarxCoil_Supplement_Video.mov">Here’s a video of it in action from [1].</a> 
+			And, if you're curious, yes, it should help with streamer loading – you can read more about that in 
+			<a href="#1">[1]</a>. 
+			</p>
+		</div>
+	</div>
+	<div class="row" style="margin-top: 0%;text-align:justified">
+      	<div class="twelve columns" style="text-align:center">
+      		<img class="u-max-full-width" style="max-height:400px" src="note-7-MarxCoil-fig1.png" alt="Fig1"/>
+      	</div>
+      	<div class="twelve columns">
+      		<em><h6> 
+      		Figure 1, adapted from <a href="#1">[1]</a>: "Marx coil." 
+      		(a) Side view showing a metal terminal above a single-layer solenoid inductor and a metal base with power and ground wiring. 
+      		BP = breakout point. 
+      		(b) Spark discharge. (<a href="../media/2018_RSI_McGuyer_MarxCoil_Supplement_Video.mov">Video link.</a>)
+      		(c) View beneath the terminal showing the Marx generator inside the solenoid. 
+      		(d) Side view without the solenoid, showing the Marx generator above a ground plane. 
+      		</h6></em> 
+      	</div>
+    </div>
+    <div class="row" style="margin-top: 2%">
+      	<div class="twelve columns">
+			
+			<p>
+			If you’re interested in building another “Marx coil” like this, there’s some documentation available in 
+			<a href="#1">[1]</a>. 
+			[<em>Obligatory warning: 
+			This device is dangerous, likely more so than a comparable Tesla coil because it lacks isolation from resonant coupling. 
+			Proceed at your own risk!</em>] 
+			One interesting aspect is that I needed inductors that could withstand several kV of RF. 
+			My approach used cheap ferrite-core inductors submerged in mineral oil to prevent flashovers. 
+			I was surprised to see that mineral oil moves with high voltage and can even flow away from an inductor, sucking air down to it. 
+			In the end, I confined the oil in clear PVC pipes. 
+			Unfortunately, I was unable to remove all the air at the top of the pipes. 
+			Exposure to high fields burned the oil near those interfaces over time, creating black particles that rained down. 
+			Sadly, this caused a cascade of inductor failures, eventually ruining most of them. 
+			</p>
+			
+			
+		</div>
+	</div>
+	<div class="row" style="margin-top: 0%;text-align:justified">
+      	<div class="four columns" style="text-align:center">
+      		<img class="u-max-full-width" style="max-height:200px" src="note-7-MarxCoil-fig2a.png" alt="Fig2(left)"/>
+      	</div>
+      	<div class="one columns">
+      	</div>
+      	<div class="seven columns" style="text-align:center">
+      		<img class="u-max-full-width" style="max-height:200px" src="note-7-MarxCoil-fig2b.png" alt="Fig2(right)"/>
+      	</div>
+      	<div class="twelve columns">
+      		<em><h6> 
+      		Figure 2: Comparison of simplified Tesla coil (left) and "Marx coil" (right) circuits. 
+      		The Marx coil resembles a Tesla coil with the primary circuit elements (spark gap, capacitor, and inductor) divided into several parts and interlaced. 
+      		However, there's no resonant coupling in the Marx coil, making it rather insensitive to changes to its circuit parameters <a href="#1">[1]</a>. 
+      		</h6></em> 
+      	</div>
+    </div>
+    <div class="row" style="margin-top: 2%">
+      	<div class="twelve columns">
+			
+			<p>
+			If you've built something similar, please let me know: <span class="reverse">moc (tod) reyugcmtrab (ta) em-tcatnoc</span>. 
+			I’m optimistic that there’s a lot of room left for exploration. 
+			</p>
+			
+			<strong>References</strong>
+			<ul style="list-style:none;" class="hangingindent">
+				<li><a id="1"></a>[1] B. H. McGuyer, "Note: Investigation of a Marx Generator Imitating a Tesla Transformer," 
+				<a href="https://doi.org/10.1063/1.5035286"><u>Rev. Sci. Instrum. <b>89</b>, 086102 (2018)</u></a>. 
+				<br />
+				&thinsp; <a href="pdf/2018_RSI_McGuyer_MarxCoil.pdf">(&nbsp;PDF,</a> 
+				<a href="pdf/2018_RSI_McGuyer_MarxCoil_Supplement.pdf">Supplemental Material,</a>
+				<a href="media/2018_RSI_McGuyer_MarxCoil_Supplement_Video.mov">Video&nbsp;)</a></li>
+				<li><a id="2"></a>[2] Well, modern Tesla coil designs have really blurred the definition of what exactly is a Tesla coil, so maybe this still counts? 
+				</li>
+			</ul>
+			
+			<p>(October 2019)</p>
+			
+      	</div>
+    </div>
+	
+	<!-- Dividing Line and Copyright -->
+  	<div class="row" style="margin-top: 0%">
+  		<div class="twelve columns">
+  			<hr />
+  			&copy; 
+			<script type="text/javascript">
+			var d = new Date()
+			document.write(d.getFullYear())
+			</script>, 
+			bartmcguyer.com
+  		</div>
+	</div>
+	
+  </div>
+
+<!-- End Document
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
